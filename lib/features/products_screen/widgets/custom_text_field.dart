@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:route_task/core/config/app_theme_manager.dart';
 
-import '../../../core/config/constants.dart';
-
 class CustomTextField extends StatefulWidget {
   final TextEditingController? controller;
   final bool? isPassword;

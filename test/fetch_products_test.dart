@@ -1,9 +1,11 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:route_task/core/failure/failure.dart';
 import 'package:route_task/core/services/web_service.dart';
 import 'package:route_task/data/data_source/products_data_source/products_data_source.dart';
 import 'package:route_task/data/data_source/products_data_source/products_data_source_imp.dart';
 import 'package:route_task/data/repository_imp/products_repository_imp.dart';
+import 'package:route_task/domain/entities/products_entity.dart';
 import 'package:route_task/domain/repository/products_repository.dart';
 import 'package:route_task/domain/use_case/get_products_use_case.dart';
 
@@ -19,6 +21,6 @@ void main() {
     // Act
     var result = await productsUseCase.execute();
     // Assert
-    expect(result, isA<Right>());
+    expect(result, Either<Failure, List<ProductsEntity>>);
   });
 }
